@@ -1,20 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #292826;
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
+    /*height: 100vh;*/
+}
+
+.container {
     padding: 3rem;
-    width: 400px;
-  }
-  
-  input[type="search"] {
+    /*width: 400px;*/
+}
+
+input[type="search"] {
     -webkit-appearance: none !important;
     background-clip: padding-box;
     background-color: white;
@@ -28,29 +32,29 @@ body {
     -webkit-transition: border-color 0.2s;
     -moz-transition: border-color 0.2s;
     transition: border-color 0.2s;
-  }
-  
-  input[type="search"]:focus {
+}
+
+input[type="search"]:focus {
     transition: all 0.5s;
     box-shadow: 0 0 40px #f9d442b9;
     border-color: #f9d342;
     outline: none;
-  }
-  
-  form.search-form {
+}
+
+form.search-form {
     display: flex;
     justify-content: center;
-  }
-  
-  label {
+}
+
+label {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
     align-self: center;
     margin-bottom: 0;
-  }
-  
-  input.search-field {
+}
+
+input.search-field {
     margin-bottom: 0;
     flex-grow: 1;
     flex-shrink: 0;
@@ -59,9 +63,9 @@ body {
     height: 51px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-  }
-  
-  input.search-submit {
+}
+
+input.search-submit {
     height: 51px;
     margin: 0;
     padding: 1rem 1.3rem;
@@ -71,17 +75,17 @@ body {
     border-bottom-right-radius: 0.25rem;
     font-family: "Font Awesome 5 Free";
     font-size: 1rem;
-  }
-  
-  .screen-reader-text {
+}
+
+.screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
-  }
-  
-  .button {
+}
+
+.button {
     display: inline-block;
     font-weight: 600;
     font-size: 0.8rem;
@@ -96,14 +100,40 @@ body {
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
-  }
-  
-  .button:hover,
-  .button:active,
-  .button:focus {
+}
+
+.button:hover,
+.button:active,
+.button:focus {
     cursor: pointer;
     background: #d4b743;
     color: #292826;
     outline: 0;
-  }
-  
+}
+
+.results {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+}
+
+.card {
+    font-family: 'Nunito', sans-serif;
+    padding: 16px;
+    background: white;
+    width: 260px;
+    border-radius: 4px;
+    margin: 16px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.card-logo {
+    max-height: 100%;
+    max-width: 100%;
+}

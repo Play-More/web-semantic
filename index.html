@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Glowing Search Bar</title>
+    <title>Rechercher un manga</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
@@ -23,10 +23,10 @@
     <div class="container">
       <form role="search" method="get" class="search-form form" action="">
         <label>
-            <span class="screen-reader-text">Search for...</span>
-            <input type="search" class="search-field" placeholder="Type something..." value="" name="s" title="" />
+            <span class="screen-reader-text">Recherchez un manga...</span>
+            <input type="search" class="search-field" placeholder="Recherchez un manga..." value="" name="s" title="" />
         </label>
-        <input type="submit" class="search-submit button" value="&#xf002" />
+        <input type="submit" id="search_manga" onclick="search()" class="search-submit button" value="&#xf002" />
     </form>
     </div>
   </div>

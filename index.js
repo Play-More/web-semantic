@@ -72,6 +72,7 @@ const createCard = (data) => {
   if (data.logo) {
     const div = document.createElement('div');
     const img = document.createElement('img');
+    img.classList.add('card-logo');
     img.src = data.logo.value;
     div.appendChild(img);
     container.appendChild(div);

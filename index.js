@@ -169,79 +169,7 @@ const getAll = async () => {
   }
 }
 
-
-const getManga = (name) => {
-  fetch("https://sandbox.bordercloud.com/sparql", {
-    "method": "POST",
-    "headers": {
-      "content-type": "application/x-www-form-urlencoded",
-      "authorization": "Basic RVNHSS1XRUItMjAyMDpFU0dJLVdFQi0yMDIwLWhlVXE5Zg=="
-    },
-    "mode": "no-cors",
-    "body": {
-      "query": `SELECT ?q
-                WHERE
-                {
-                GRAPH <https://www.esgi.fr/2019/ESGI5/IW1/projet7>
-                {?s ?p ?q. 
-                {
-                SELECT ?s
-                WHERE
-                {
-                    ?s ?p ?q.
-                    FILTER(CONTAINS(LCase(?q), "${name}" || ))
-                }
-                }
-                }
-                }`
-    }
-  })
-    .then(response => {
-      return response.json()
-    })
-    .then(data => console.log(data))
-    .catch(err => {
-      console.error(err);
-    });
-}
-
-const saveSearch = (text) => {
-  fetch("https://sandbox.bordercloud.com/sparql", {
-    "method": "POST",
-    "headers": {
-      "content-type": "application/x-www-form-urlencoded",
-      "authorization": "Basic RVNHSS1XRUItMjAyMDpFU0dJLVdFQi0yMDIwLWhlVXE5Zg=="
-    },
-    "body": {
-      "query": `SELECT ?q
-                WHERE
-                {
-                GRAPH <https://www.esgi.fr/2019/ESGI5/IW1/projet7>
-                {?s ?p ?q. 
-                {
-                SELECT ?s
-                WHERE
-                {
-                    ?s ?p ?q.
-                    FILTER(CONTAINS(LCase(?q), "${text}"))
-                }
-                }
-                }
-                }`
-    }
-  })
-    .then(response => {
-      return response.json()
-    })
-    .then(data => console.log(data))
-    .catch(err => {
-      console.error(err);
-    });
-}
-
-
 getAll();
 
-getManga('bleach');
 
 

@@ -175,7 +175,7 @@ const getManga = (name) => {
     "method": "POST",
     "headers": {
       "content-type": "application/x-www-form-urlencoded",
-      "authorization": "Basic " + base64.encode()
+      "authorization": "Basic RVNHSS1XRUItMjAyMDpFU0dJLVdFQi0yMDIwLWhlVXE5Zg=="
     },
     "mode": "no-cors",
     "body": {
